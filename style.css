@@ -1,0 +1,1161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 64px;
+    color: black;
+}
+
+h2 {
+    font-size: 52px;
+    line-height: 54px;
+    color: black;
+}
+
+h4 {
+    font-size: 25px;
+    color: black;
+}
+
+h5 {
+    font-weight: 650;
+    font-size: 14px;
+}
+
+p {
+    font: 20px;
+    color: rgb(137, 128, 128); /* Changed color to red */
+    margin: 15px 0 20px 0;
+}
+
+/* Removed the p1 selector */
+
+section-mar1 {
+    margin: 50px 0;
+}
+
+button.normal {
+    font-size:20px;
+    font-weight:600;
+    padding: 15px 30px;
+    color:black;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2;
+}
+button.white {
+    font-size:14px;
+    font-weight:1000;
+    padding: 12px 30px;
+    color:rgba(255, 77, 0, 0.882);
+    background-color: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid rgb(255, 119, 0);
+    outline: none;
+    transition: 0.2s;
+}
+
+
+body {
+    width: 100%;
+}
+
+.logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Adjust the width as needed */
+    height: 75px; /* Maintain aspect ratio */
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 80px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align to the right */
+    list-style-type: none;
+    padding: 0 20px;
+    margin-left: auto; /* Move everything to the right */
+}
+
+#navbar li {
+    list-style-type: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    transition: 0.2s ease;
+    
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: grey;
+}
+
+/* ... (previous CSS rules) */
+
+/* Apply a different style for the icon's underline */
+#navbar li a.active::after,
+#navbar li a:hover::after {
+    content: "";
+    width: 70px; /* Adjust the width as needed */
+    height: 2px;
+    background: rgb(24, 21, 24);
+    position: absolute;
+    bottom: -4px;
+    left: 10px; /* Move the underline to the right by adjusting this value */
+    right: 15px; /* Move the underline to the right by adjusting this value */
+}
+#hero {
+    background-image: url("model.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top center;
+    padding: 150px; /* Add padding to move content down */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-end; /* Move content to the right */
+}
+
+#hero h4{
+    padding-bottom: 15px;
+    color: whitesmoke
+}
+#hero h2{
+    color:whitesmoke
+}
+#hero h1{
+    font: weight 300%;
+    -webkit-text-stroke: 2px brown;
+    
+    color: rgb(172, 40, 40)
+}
+#hero h3 {
+    color: whitesmoke
+}
+#hero p{
+    font-size: 20px;
+    color: white
+}
+#hero button {
+    text-decoration: none;
+    display: inline-block;
+    padding: .75rem 1.65rem; /* Adjust padding */
+    font-size: 1.5rem;
+    font-weight: 800;
+    background-color: brown;
+    border: 1px solid #000000;
+    color: white;
+    font-family: 'Frank Ruhl Libr', sans-serif;
+    line-height: 2;
+    text-align: center;
+    text-decoration: none;
+    width: 115%;
+    max-width: 200px;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-top: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    position: relative;
+    outline: 0;
+    
+    margin-left: 60px !important;
+}
+
+#hero button:after {
+    content: '';
+    position: absolute;
+    border: 2px solid;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+#hero button:hover:after {
+    bottom: 2px;
+    left: 2px;
+}
+/* Product section styles */
+#product1 {
+    text-align: center;
+}
+#product1 .pro-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap; /* Allow containers to wrap when there isn't enough space */
+    gap: 17px; /* Add some space between products */
+    margin-right: 40px;
+}
+
+#product1 .pro {
+    width: calc(25% - 20px); /* Set the width for each product container with some spacing */
+    min-height: 400px;
+    
+   
+    cursor: pointer;
+    text-align: center right 20px;
+    
+    position: relative;
+}
+
+
+#product1 .pro-container:first-child {
+    flex: 0 0 calc(100% - 30px); /* Adjust the width as needed */
+    max-width: calc(100% - 30px); /* Adjust the width as needed */
+}
+
+#product1 .pro img {
+    width: 100%; /* Make the image responsive within the product container */
+    height: 100%;
+    min-width: 250px; /* Ensure the image takes the full height of the product container */
+    border-radius: 20px;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, .02); /* Add the shadow to the image */
+    transition: box-shadow 0.3s ease;
+    margin-left: 20px;
+    position: relative; /* Add a smooth transition for the shadow */
+}
+
+#product1 .pro:hover img {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, .08); /* Remove the shadow when hovering the image */
+}
+
+#product1 .pro .des span {
+    color: #6F4E37;
+    font-size: 14px;
+}
+#product1 .pro .des h5{
+    padding-top: 3px;
+    color: black;
+}
+#product1 .pro .des a {
+    font-size: 20px;
+    color: rgb(172, 40, 40); /* Adjust the color as needed */
+    border: 2px solid black; /* Add a border to create a circle */
+    border-radius: 50%; /* Make the border a circle */
+    padding: 0px; /* Adjust padding as needed to control the size of the circle */
+    text-align: center; /* Center the icon inside the circle */
+    display: inline-block; /* Make sure the circle only wraps around the icon */
+    width: 30px; /* Adjust the width of the circle */
+    height: 30px; /* Adjust the height of the circle */
+    line-height: 30px; /* Center the icon vertically inside the circle */
+    margin-left: -3px; /* Add spacing between the icon and text */
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("bannerback.jpg");
+    width: 200h;
+    height: 40vh;
+    background-size: cover; /* Set background size to cover */
+    background-position: center;
+}
+
+
+#banner h4 {
+    color: white;
+    font-size: 16px;
+}
+#banner h2 {
+    color: white;
+    font-size: e0px;
+    padding: 10px 0;
+}#banner h2 span{
+    color: rgb(255, 109, 143);
+    
+}
+#banner button:hover{
+    background-color: pink;
+    color: white;
+}
+#sm-banner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 110px;
+    margin-left: 130px;
+    padding: 3px;
+}
+#sm-banner .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: end;
+    background-image: url("bannerback2.jpg");
+    min-width: 610px;
+    height: 45vh;
+    background-size: cover; /* Set background size to cover */
+    background-position: top;
+    margin: 10px;
+    padding: 15px;
+
+}
+#sm-banner .banner-box2 {
+    background-image: url("bannerback3.jpg");
+    background-size: cover; /* Set background size to cover */
+    background-position: top; /* Adjust background positioning as needed */
+    min-width: 580px;
+    height: 45;
+    margin: 10px;
+    margin-right: 23px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: end;
+}
+
+#sm-banner h2{
+    color: brown;
+    font-size: 28px;
+    font-weight: 800;
+}
+#sm-banner h4{
+    color: rgba(100, 0, 0, 0.83);
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: -10px;
+    
+}
+#sm-banner span{
+    color: rgba(100, 0, 0, 0.83);
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button{
+    background: rgba(255, 77, 0, 0.882);
+    color: whitesmoke;
+    border: 1px solid rgba(255, 77, 0, 0.882);
+}
+#banner3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 120px;
+    text-align: start;
+}
+
+#banner3 .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align text content to the top */
+    text-align: left;
+    background-image: url("bannerback5.jpg");
+    min-width: 30%; /* Adjust min-width and consider margins */
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    text-align: start;
+    margin: 20px;
+    padding: 20px;
+    
+}
+
+
+#banner3 .banner-box2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: end;
+    background-image: url("bannerback6.jpg");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center top 40px; /* Adjust the top value to 5 pixels */
+    margin: 20px;
+    padding: 20px;
+}
+
+
+#banner3 .banner-box3 {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-start;
+    text-align: right;
+    background-image: url("bannerback7.jpg");
+    min-width: 30.1%;
+    height: 30vh;
+    background-size: cover; /* Adjust the width to make it wider while maintaining aspect ratio */
+    background-position: center;
+    margin: 20px;
+    padding: 20px;
+    
+    
+}
+
+
+#banner3 h2 {
+    color: white;
+    font-weight: 900;
+    font-size: 18px;; /* Prevent line breaks within the text */
+}
+#banner3 .banner-box2 h2{
+    font-size: 20px;
+    /* Prevent line breaks within the text */
+}
+#banner3 h3{
+    color: white;
+    font-weight: 800;
+    font-size: 15px;
+    margin-top: -5px;
+}
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("bannerback8.jpg");
+    
+    background-position:unset;
+    background-size: cover;
+    background-color: darkblue;
+    width: 100%;
+    height: 35vh; /* Increase the height to make it bigger */
+    margin: 0;
+    text-align: center; /* Center-align the text */
+}
+#newsletter {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("bannerback8.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 160px;
+    background-color: darkblue;
+    width: 100%; /* Set to 100% to span the full width of the page */
+   
+    padding: 40px; /* Add some padding for spacing */
+    text-align: center; /* Center-align the content */
+    margin-bottom: 10px;
+}
+
+#newsletter .newstext {
+    flex: 1; /* Allow it to take up available space */
+    text-align: left; /* Align the text to the left */
+    margin-right: 20px; /* Add some space between the text and input/button */
+}
+#newsletter .newstext {
+    text-align: left; /* Align the text to the left */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding-bottom: 15px;
+    padding-left: 40px; /* Add padding for spacing inside the box */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0); /* Add a subtle shadow */
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the box horizontally */
+    
+}
+
+#newsletter h4 {
+    font-size: 22px;
+    font-weight: 800;
+    color:rgb(0, 0, 0); /* Change text color to white */
+    line-height: 1;
+    text-align: left; /* Align the text to the left */
+    margin-bottom: 10px; /* Add space below the heading */
+    margin-top: 5px;
+}
+
+#newsletter .newstext p {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    text-align: left; /* Align the text to the left */
+    margin-bottom: 5px; /* Add space below the paragraph */
+    opacity: 0.85;
+} 
+
+#newsletter .newstext p span {
+    color: rgb(255, 170, 13)
+}
+
+#newsletter div {
+    flex: 1; /* Allow it to take up available space */
+    text-align: center; /* Align the content to the center */
+}
+
+#newsletter input[type="text"] {
+    padding: 10px; /* Add some padding to the input field */
+    border: none; /* Remove the border */
+    background-color: white; /* Change the background color to white */
+    width: 100%; /* Make the input field span the container's width */
+    max-width: 300px; /* Limit the maximum width */
+}
+
+#newsletter button {
+    padding: 10px 20px; /* Add padding to the button */
+    background-color: rgb(255, 217, 0); /* Change the button background color */
+    border: none; /* Remove the border */
+    color: darkblue; /* Change text color */
+    font-weight: 700;
+    cursor: pointer; /* Add a pointer cursor */
+}
+
+/* Style the button on hover */
+#newsletter button:hover {
+    background-color: rgb(255, 189, 24);
+    color: white;
+}
+
+#newsletter input {
+    height: 3.125rem;
+    padding: 0 1.25em;
+    width: 50%;
+    /* Add black border */
+    border-radius: 4px;
+    outline: rebeccapurple;
+    /* Add margin to separate input and button */
+}
+
+
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    justify-content: space-between;
+}
+
+footer .col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    margin-right: 25px;
+    margin-left: 20px;
+}
+
+
+footer h4 {
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 0 10px 0;
+}
+
+footer a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 16px;
+}
+
+/* Style the "Follow us" section */
+.footer .follow {
+    margin-top: 20px;
+}
+
+/* Style "Follow us" icons */
+.icon {
+    margin-top: 10px;
+}
+
+.icon i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+
+
+footer .follow i{
+    color: rgb(70, 56, 85);
+    padding-right: 4px;
+    cursor: pointer;
+}
+footer .install .row img{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 6px;
+}
+footer .install img{
+    margin: 10px 0 15px 0;
+}
+.copyright {
+    background-color: #222;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.copyright p {
+    font-size: 13px; /* Adjust the font size as needed */
+    color: #ffffff;
+    margin: 0;
+    opacity: .6; /* Remove default margin */
+}
+footer .col2 h4{
+    margin-left: 15px;
+}
+footer .col2 p{
+    margin-left: 15px;
+}
+#page-header {
+    background-image: url("shopban.jpg");
+    background-repeat: no-repeat;
+    width: 906px;
+    height: 550px; /* Fixed height of 550px */
+    background-position: center top; /* Position the top part of the image at the center */
+    color: white; /* Make the text white */
+    justify-content: center;
+    margin-left: 295px;
+    padding: 14px;
+    text-align: justify;
+    padding-top: 225px;
+    
+}
+#page-header h2 {
+    color: rgb(255, 255, 240);
+    font-weight: 900;
+    text-align: center;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+#page-header p {
+    color: rgb(255, 255, 240);
+    font-weight: 600;
+    -webkit-text-stroke-width: .2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    text-align: center;
+    
+}
+#pagination {
+    text-align: center;
+}
+#pagination a{
+    text-decoration: none;
+    background-color: maroon;
+    
+    padding: 15px 20px;
+    border-radius: 4px;
+    color:gold;
+    font-weight: 800;
+    
+}
+#pagination a i{
+    font-size: 18px;
+    font-weight: 800;
+    padding-bottom: 40px;
+}
+#prodetails{
+    display: flex;
+    margin-top: 20px;
+}
+
+
+#prodetails .single-pro-img{
+    width: 35%;
+   
+    margin:  50px;
+}
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#prodetails .single-pro-details{
+    width: 50%;
+    padding-top: 30px;
+}
+#prodetails .single-pro-details h4{
+    padding:40px 0 20px 0;
+
+}
+#prodetails .single-pro-details h2{
+    font-size:26px;
+}
+#prodetails .single-pro-details select{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+#prodetails .single-pro-details input{
+    width: 50px;
+    height:47px;
+    padding-left:10px;
+    font-size:16px;
+    margin-right:10px;
+}
+#prodetails .single-pro-details button{
+    background-color: rgba(200, 0, 0, 0.9);
+    color: ivory;
+}
+#prodetails .single-pro-details input:focus{
+   outline: none;
+}
+#prodetails .single-pro-details span{
+    line-height: 25px;
+}
+#page-header.blogheader {
+    background-image: url("book\ \(2\).jpg");
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    position: relative;
+    padding: 30px;
+
+    margin-bottom: 20px;
+}
+
+#page-header.blogheader h2,
+#page-header.blogheader p {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    -webkit-text-stroke-width: 1.5px; /* Added text stroke for better readability */
+    -webkit-text-stroke-color: slategrey;
+    font-weight: 800;
+}
+
+#page-header.blogheader p {
+    top: 60px;
+    font-size: 22px;
+}
+
+#blog {
+    padding: 120px 120px 0px  140px;
+}
+
+#blog .blog-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-bottom: 90px;
+}
+
+#blog .blog-img {
+    width: 50%;
+    margin-right: 40px; /* Corrected the margin property name */
+    
+}
+
+#blog img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+    padding-bottom: 30px;
+    
+    
+}
+#blog .blog-details{
+    width: 50%;
+}
+#blog .blog-details a{
+    text-decoration:none;
+    font-size:11px;
+    color: black;
+    font-weight: 700;
+    position: relative;
+    transition: 0.3s;
+}
+
+#blog .blog-details a::after{
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color:#000000;
+    position: absolute;
+    top:4px;
+    right: -60px;
+}
+#blog .blog-details a:hover{
+    color: rgb(255, 170, 13);
+
+}
+#blog .blog-details a:hover::after{
+    background-color: rgb(255, 170, 13);
+    transition: 0.3s;
+
+}
+#blog .blog-box h1{
+    position: absolute;
+    top:-40px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color: #c9cbce;
+    z-index: -9;
+
+}
+#page-header.aboutheader {
+    background-image: url("aboutbanner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 35vh;
+    width: 105%; /* Set the width to 100% to take up the full viewport width */
+    position: relative;
+    padding: 30px;
+    margin-bottom: 20px;
+    margin-left: -62px;
+    
+
+}
+#page-header.aboutheader h2,
+#page-header.aboutheader p{
+    color: rgb(255, 255, 255);
+    font: weight 800px;;
+    -webkit-text-stroke-color: rgb(0, 0, 0);
+    -webkit-text-stroke-width: 2%;
+}
+#page-header.aboutheader p{
+    font-size: 30px;
+}
+
+
+
+#about-head{
+    display: flex;
+    align-items: center;
+}
+#about-head img{
+    width: 100%;
+    padding: 40px;
+}
+#about-head div{
+  padding: 40px;
+}
+#about-head h2{
+    padding-bottom: 20px;
+}
+#about-app{
+    text-align: center;
+}
+#about-app .video {
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    margin: 30px auto 0 auto; /* Adjust the margin-bottom as needed */
+    border-radius: 50px;
+}
+
+#about-app .video video {
+    width: 100%;
+    height: auto;
+    transform: translateY(-30%);
+    margin-bottom: -350px;
+    border-bottom: 20px solid #000; /* Add a 2px solid black border to the bottom */
+}
+
+#page-header.contactheader {
+    background-image: url("contactbanner.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 35vh;
+    width: 105%; /* Set the width to 100% to take up the full viewport width */
+    position: relative;
+    padding: 30px;
+    margin-bottom: 20px;
+    margin-left: -62px;
+    color: burlywood;
+}
+#contact-details {
+    display: flex;
+    flex-direction:row ;/* Adjust the layout to vertical */
+    align-items: flex-start; /* Align items to the left */
+}
+
+#contact-details span {
+    width: 100%; 
+    font-size: 12px;/* Adjust the width to fill the container */
+}
+#contact-details h2{
+    font-size: 30px;
+    padding-bottom: -20px;
+}
+
+#contact-details h3{
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+#contact-details h2, #contact-details h3, #contact-details li,#contact-details span {
+    margin-left: 0; /* Remove margin-left for these elements */
+    padding-left: 80px; /* Apply padding for spacing */
+    padding-right:100px;
+}
+#contact-details.details h2,
+#form-details form h2{
+    font-size: 26px;
+    list-style: 35px;
+    padding-left: 20px 0;
+}
+
+#page-header.contactheader h2,
+#page-header.contactheader p{
+    color: rgb(255, 255, 255);
+    font: weight 800px;;
+    -webkit-text-stroke-color: transparent;
+    
+}
+#contact-details.details li {
+    list-style: none;
+    display: flex;
+   
+    padding: 10px 0;
+}
+
+#contact-details.details li i {
+    font-size: 14px;
+    padding-right: 22px; /* Adjust spacing between icon and text */
+}
+
+#contact-details.details li p {
+    margin: 0;
+    font-size: 14px;
+}
+#contact-details .map{
+    width: 55%;
+    height: 400px;
+    margin-right: 80px;
+}
+
+#contact-details .map iframe{
+    width: 100%;
+    height: 100%;
+   
+}
+
+#form-details{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+}
+#form-details form{
+    width:65%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#form-details form span{
+    font-size: 12px;
+}
+#form-details form input{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+#form-details form textarea{
+    width: 100%;
+    outline: none;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form button{
+    background-color: gold;
+    color: darkblue;
+    margin-top: 20px;
+}
+#form-details .people div{
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+
+}
+#form-details .people div img{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+
+}
+#form-details .people div p{
+    margin:0;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+#form-details .people div p span{
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+}
+#page-header.cartheader{
+    background-image: url("stylish-woman-spring-city-with-shopping-bags.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 35vh;
+    width: 105%; /* Set the width to 100% to take up the full viewport width */
+    position: relative;
+    padding: 30px;
+    margin-bottom: 20px;
+    margin-left: -62px;
+    
+}
+#page-header.cartheader h2,
+#page-header.cartheader p{
+    -webkit-text-stroke: #6F4E37;
+    -webkit-text-stroke-width: 1.5px;
+     color: whitesmoke;
+}
+
+#page-header.cartheader h2{
+
+}
+#page-header.cartheader p{
+    font-size: 22px;
+}
+
+
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+#cart table img{
+    width: 50px;
+}
+#cart table td:nth-child(1){
+    width: 100px;
+    text-align: center;
+
+}
+#cart table td:nth-child(2){
+    width: 150px;
+    text-align: center;
+
+}
+#cart table td:nth-child(3){
+    width: 250px;
+    text-align: center;
+
+}
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+
+}
+#cart table td:nth-child(5){
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+
+#cart table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+#cart table tbody tr td{
+    padding-top: 15px;
+}
+#cart table thead td{
+    font-size: 13px;
+}
+#cart-add{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#coupon{
+    width: 50%;
+    margin-bottom: 30px;
+}
+#coupon h3,
+#subtotal h3{
+    padding-bottom: 15px;
+
+}
+#coupon input{
+    padding: 10px 20px;
+    outline:none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+    margin-bottom: 10px;
+}
+#coupon button,
+#subtotal button{
+    background-color: gold;
+    color: darkblue;
+    
+    
+}
+#subtotal {
+    width: 50%;
+    margin-bottom: 30px;
+    border:1px solid #e2e9e1;
+    padding:30px;
+}
+
+#subtotal table {
+    border-collapse:collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    
+
+}
+#subtotal table td{
+    width:50%;
+    border:1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+
+}
+
